@@ -1,0 +1,45 @@
+{
+"preguntasAM":
+    [
+        {
+        "Pregunta" : "El chaleco reflectante. ¿Cuándo es obligatorio ponérselo?",
+        "RespuestaA": Cuando salgo del vehículo en vías urbanas.,
+        "RespuestaB": Cuando salgo del vehículo en autopistas y autovías solamente.,
+        "RespuestaC": Cuando salgo del vehículo en vías interurbanas.,
+        "RespuestaD": Cuando salgo del vehículo en vías de natación sincronizada.,
+        "RespuestaCorrecta": B.,
+        },
+        {
+        "Pregunta" : "El chaleco reflectante. ¿Cuándo es obligatorio ponérselo?",
+        "RespuestaA": Cuando salgo del vehículo en vías urbanas.,
+        "RespuestaB": Cuando salgo del vehículo en autopistas y autovías solamente.,
+        "RespuestaC": Cuando salgo del vehículo en vías interurbanas.,
+        "RespuestaD": Cuando salgo del vehículo en vías de natación sincronizada.,
+        "RespuestaCorrecta": B.,
+        },
+        {
+        "Pregunta" : "El chaleco reflectante. ¿Cuándo es obligatorio ponérselo?",
+        "RespuestaA": Cuando salgo del vehículo en vías urbanas.,
+        "RespuestaB": Cuando salgo del vehículo en autopistas y autovías solamente.,
+        "RespuestaC": Cuando salgo del vehículo en vías interurbanas.,
+        "RespuestaD": Cuando salgo del vehículo en vías de natación sincronizada.,
+        "RespuestaCorrecta": B.,
+        },
+        {
+        "Pregunta" : "El chaleco reflectante. ¿Cuándo es obligatorio ponérselo?",
+        "RespuestaA": Cuando salgo del vehículo en vías urbanas.,
+        "RespuestaB": Cuando salgo del vehículo en autopistas y autovías solamente.,
+        "RespuestaC": Cuando salgo del vehículo en vías interurbanas.,
+        "RespuestaD": Cuando salgo del vehículo en vías de natación sincronizada.,
+        "RespuestaCorrecta": B.,
+        },
+        {
+        "Pregunta" : "El chaleco reflectante. ¿Cuándo es obligatorio ponérselo?",
+        "RespuestaA": Cuando salgo del vehículo en vías urbanas.,
+        "RespuestaB": Cuando salgo del vehículo en autopistas y autovías solamente.,
+        "RespuestaC": Cuando salgo del vehículo en vías interurbanas.,
+        "RespuestaD": Cuando salgo del vehículo en vías de natación sincronizada.,
+        "RespuestaCorrecta": B.,
+        }
+    ]
+}
