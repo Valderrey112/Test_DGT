@@ -1,6 +1,30 @@
 [
     {
-        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
+        "pregunta":"La reuda de repuesto. ¿Cuando es obligatorio ponerselo?",
+        "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
+        "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
+        "respuestaD":"Cuando salgo del vehiculo en vias de natacion sincronizada.",
+        "respuestaCorrecta":"Cuando salgo del vehiculo en vias de natacion sincronizada."
+    },
+    {
+        "pregunta":"El triangulo. ¿En que casos no es obligatorio ponerlo?",
+        "respuestaA":"Cuando el accidente no genere daños graves.",
+        "respuestaB":"En caso de detención inferior a dos minutos.",
+        "respuestaC":"Cuando el coche averiado no realice una para superior a 10 minutos",
+        "respuestaD":"Si estamos en una via de natacion sincronizada.",
+        "respuestaCorrecta":"Si estamos en una via de natacion sincronizada."
+    },
+    {
+        "pregunta":"¿En que casos podremos conducir el coche con el permiso caducado o sin puntos?",
+        "respuestaA":"En caso de ir a renovarlo.",
+        "respuestaB":"Cuando la perdida de puntos ha sido en el mismo trayecto de ida o vuelta.",
+        "respuestaC":"Cuando nos encontremos en zona no residenciales.",
+        "respuestaD":"En el caso de tener que ir a una via de natacion sincronizada.",
+        "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente."
+    },
+    {
+        "pregunta":"El paralelepipedo reflectante. ¿Cuando es obligatorio ponerselo?",
         "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
         "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
         "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
@@ -8,31 +32,7 @@
         "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente."
     },
     {
-        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
-        "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
-        "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
-        "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
-        "respuestaD":"Cuando salgo del vehiculo en vias de natacion sincronizada.",
-        "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente."
-    },
-    {
-        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
-        "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
-        "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
-        "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
-        "respuestaD":"Cuando salgo del vehiculo en vias de natacion sincronizada.",
-        "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente."
-    },
-    {
-        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
-        "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
-        "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
-        "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
-        "respuestaD":"Cuando salgo del vehiculo en vias de natacion sincronizada.",
-        "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente."
-    },
-    {
-        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
+        "pregunta":"El correveydiles reflectante. ¿Cuando es obligatorio ponerselo?",
         "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
         "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
         "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",

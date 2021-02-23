@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.test_dgt;
+package com.marcovalderrey.mycompany.test_dgt;
 
 /**
  *
@@ -40,7 +40,6 @@ public class Pregunta {
     String respuestaDAbajo;
     
     String respuestaCorrecta;
-    String respuestaCorrectaAbajo;
 
     public String getPregunta() {
         return pregunta;
@@ -129,40 +128,34 @@ public class Pregunta {
     public void setRespuestaCorrecta(String respuestaCorrecta) {
         this.respuestaCorrecta = respuestaCorrecta;
     }
-
-    public String getRespuestaCorrectaAbajo() {
-        return respuestaCorrectaAbajo;
-    }
-
-    public void setRespuestaCorrectaAbajo(String respuestaCorrectaAbajo) {
-        this.respuestaCorrectaAbajo = respuestaCorrectaAbajo;
+    
+    public String toString(){
+    
+        return getPregunta() + getPreguntaAbajo();
+        
     }
     
     void dividirCadenasLargas(){
     
-        if(pregunta.length()>=55){
-            preguntaAbajo = pregunta.substring(55, pregunta.length());
-            pregunta = pregunta.substring(0, 54);
+        if(pregunta.length()>=60){
+            preguntaAbajo = pregunta.substring(59, pregunta.length());
+            pregunta = pregunta.substring(0, 59);
         }
         if(respuestaA.length()>=38){
-            respuestaAAbajo = respuestaA.substring(38, respuestaA.length());
+            respuestaAAbajo = respuestaA.substring(37, respuestaA.length());
             respuestaA = respuestaA.substring(0, 37);
         }
         if(respuestaB.length()>=38){
-            respuestaBAbajo = respuestaB.substring(38, respuestaB.length());
+            respuestaBAbajo = respuestaB.substring(37, respuestaB.length());
             respuestaB = respuestaB.substring(0, 37);
         }
         if(respuestaC.length()>=38){
-            respuestaCAbajo = respuestaC.substring(38, respuestaC.length());
+            respuestaCAbajo = respuestaC.substring(37, respuestaC.length());
             respuestaC = respuestaC.substring(0, 37);
         }
         if(respuestaD.length()>=38){
-            respuestaDAbajo = respuestaD.substring(38, respuestaD.length());
+            respuestaDAbajo = respuestaD.substring(37, respuestaD.length());
             respuestaD = respuestaD.substring(0, 37);
-        }
-        if(respuestaCorrecta.length()>=38){
-            respuestaCorrectaAbajo = respuestaCorrecta.substring(38, respuestaCorrecta.length());
-            respuestaCorrecta = respuestaCorrecta.substring(0, 37);
         }
         
     }

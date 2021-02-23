@@ -1,1 +1,0 @@
-Por el momento llevo las interfaces y que se muestren preguntas, faltan cosas pero todo (menos caracteristicas del test) está siendo funcional ahora mismo.

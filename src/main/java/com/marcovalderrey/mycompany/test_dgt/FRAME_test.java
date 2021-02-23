@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.test_dgt;
+package com.marcovalderrey.mycompany.test_dgt;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.awt.print.Book;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.Random;
 
 /**
  *
@@ -25,12 +25,26 @@ public class FRAME_test extends javax.swing.JFrame {
     
     PANEL_Principal panelPrincipal;
     PANEL_Preguntas panelPreguntas = new PANEL_Preguntas();
+    PANEL_Resultados panelResultados = new PANEL_Resultados();
+    
+    ArrayList<Pregunta> listaPreguntas = new ArrayList();
+    ArrayList<Respuesta> listaRespuestas = new ArrayList();
+    Respuesta arrayRespuestas[];
+    Pregunta arrayPreguntas[];
+    
+    int indicePregunta = 0;
+    int numeroDePreguntas = 0;
+    
+    boolean modoAdministrador = false;
+    boolean finalizar = false;
     
     public FRAME_test() {
         initComponents();
         panelPrincipal = new PANEL_Principal();
         panelPrincipal.setVisible(true);
         panelControlador.add(panelPrincipal);
+        btnAnterior.setVisible(false);
+        btnPosterior.setVisible(false);
         pack();
     }
 
@@ -40,15 +54,33 @@ public class FRAME_test extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        btnTest = new javax.swing.JButton();
         lblAvisoIniciarTest = new javax.swing.JLabel();
         panelControlador = new javax.swing.JPanel();
+        pnlBotones = new javax.swing.JPanel();
+        btnAnterior = new javax.swing.JButton();
+        btnTest = new javax.swing.JButton();
+        btnPosterior = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         jMenuEdicion = new javax.swing.JMenu();
+        menuAdministrador = new javax.swing.JMenuItem();
+        menuDesactivarAdmin = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lblAvisoIniciarTest.setForeground(new java.awt.Color(255, 0, 0));
+
+        panelControlador.setLayout(new java.awt.GridBagLayout());
+
+        pnlBotones.setLayout(new java.awt.GridLayout(1, 0));
+
+        btnAnterior.setText("<---");
+        btnAnterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnteriorActionPerformed(evt);
+            }
+        });
+        pnlBotones.add(btnAnterior);
 
         btnTest.setText("INICIAR TEST");
         btnTest.addActionListener(new java.awt.event.ActionListener() {
@@ -56,12 +88,35 @@ public class FRAME_test extends javax.swing.JFrame {
                 btnTestActionPerformed(evt);
             }
         });
+        pnlBotones.add(btnTest);
 
-        lblAvisoIniciarTest.setForeground(new java.awt.Color(255, 0, 0));
-
-        panelControlador.setLayout(new java.awt.GridBagLayout());
+        btnPosterior.setText("--->");
+        btnPosterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPosteriorActionPerformed(evt);
+            }
+        });
+        pnlBotones.add(btnPosterior);
 
         jMenuEdicion.setText("Edición...");
+
+        menuAdministrador.setText("Activar modo Admin...");
+        menuAdministrador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuAdministradorActionPerformed(evt);
+            }
+        });
+        jMenuEdicion.add(menuAdministrador);
+
+        menuDesactivarAdmin.setText("Desactivar modo Admin.");
+        menuDesactivarAdmin.setEnabled(false);
+        menuDesactivarAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuDesactivarAdminActionPerformed(evt);
+            }
+        });
+        jMenuEdicion.add(menuDesactivarAdmin);
+
         menuBar.add(jMenuEdicion);
 
         setJMenuBar(menuBar);
@@ -70,19 +125,15 @@ public class FRAME_test extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblAvisoIniciarTest, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(235, 235, 235))
+            .addComponent(panelControlador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(311, 311, 311)
-                        .addComponent(btnTest))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(panelControlador, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(236, 236, 236)
+                .addComponent(lblAvisoIniciarTest, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(117, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,9 +142,9 @@ public class FRAME_test extends javax.swing.JFrame {
                 .addComponent(panelControlador, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblAvisoIniciarTest, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(btnTest)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         pack();
@@ -101,34 +152,17 @@ public class FRAME_test extends javax.swing.JFrame {
 
     private void btnTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestActionPerformed
         if(btnTest.getText().equals("INICIAR TEST")){
-            if(!panelPrincipal.comprobarContenidoCampos()){
+            
+            if(panelPrincipal.comprobarContenidoCampos()){
 
                 panelPrincipal.setVisible(false);
+                menuAdministrador.setEnabled(false);
                 btnTest.setText("FINALIZAR TEST");
-                panelPrincipal = null;
+                btnAnterior.setVisible(true);
+                btnPosterior.setVisible(true);
                 panelControlador.add(panelPreguntas);
 
-                try {
-                    // create object mapper instance
-                    ObjectMapper mapper = new ObjectMapper();
-
-                    // convert JSON array to list of books
-                    File file = new File("AM.json");
-                    final ObjectMapper objectMapper = new ObjectMapper();
-                    List<Pregunta> langList = objectMapper.readValue(
-                        file,
-                        new TypeReference<List<Pregunta>>(){});
-
-                    ArrayList<Pregunta> lista = new ArrayList();
-                    langList.forEach(x -> lista.add(x));
-
-                    panelPreguntas.almacenarPreguntas(lista);
-                    panelPreguntas.dividirCadenasLargasArrayList();
-                    panelPreguntas.mostrarPrimeraPregunta();
-
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                mostrarPrimeraPregunta(panelPrincipal.getTipoTest());
 
             }else{
                 lblAvisoIniciarTest.setText("Se deben de rellenar todos datos personales");
@@ -137,10 +171,247 @@ public class FRAME_test extends javax.swing.JFrame {
         }
         else if(btnTest.getText().equals("FINALIZAR TEST")){
 
+            if(mostrarDialogoFinalizarTest()){
+                panelPreguntas.setVisible(false);
+                listaRespuestasAJson();
+                mostrarPanelResultados();
+
+                btnTest.setText("VOLVER A INICIO");
+                btnAnterior.setVisible(false);
+                btnPosterior.setVisible(false);
+                menuAdministrador.setEnabled(true);
+            }
+            
+        }
+        else if(btnTest.getText().equals("VOLVER A INICIO")){
+            
+            panelResultados.setVisible(false);
+            
+            panelPrincipal = null;
+            panelPrincipal = new PANEL_Principal();
+            panelPreguntas = null;
+            panelPreguntas = new PANEL_Preguntas();
+            panelResultados = null;
+            panelResultados = new PANEL_Resultados();
+            listaPreguntas = new ArrayList();
+            listaRespuestas = new ArrayList();
+            
+            panelControlador.add(panelPrincipal);
+            
+            btnTest.setText("INICIAR TEST");
+            
         }
     }//GEN-LAST:event_btnTestActionPerformed
 
+    private void menuAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdministradorActionPerformed
+        
+        mostrarDialogoAdministrador();
+        
+    }//GEN-LAST:event_menuAdministradorActionPerformed
+
+    private void btnPosteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPosteriorActionPerformed
+        cambiarRespuesta();
+        if(indicePregunta + 1 > numeroDePreguntas - 1){
+            indicePregunta = 0;
+        }else{
+            indicePregunta += 1;
+        }
+        panelPreguntas.mostrarXPregunta(indicePregunta);
+        panelPreguntas.setNumeroPregunta(indicePregunta + 1 + ".");
+        String opcionMarcada = listaRespuestas.get(indicePregunta).getRespuestaDada();
+        panelPreguntas.marcarOpcion(buscarOpcionMarcada(opcionMarcada));
+    }//GEN-LAST:event_btnPosteriorActionPerformed
+
+    private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnteriorActionPerformed
+        cambiarRespuesta();
+        
+        if(indicePregunta - 1 < 0){
+            indicePregunta = numeroDePreguntas - 1;
+        }else{
+            indicePregunta -= 1;
+        }
+        panelPreguntas.mostrarXPregunta(indicePregunta);
+        panelPreguntas.setNumeroPregunta(indicePregunta + 1 + ".");
+        String opcionMarcada = listaRespuestas.get(indicePregunta).getRespuestaDada();
+        panelPreguntas.marcarOpcion(buscarOpcionMarcada(opcionMarcada));
+    }//GEN-LAST:event_btnAnteriorActionPerformed
+
+    private void menuDesactivarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDesactivarAdminActionPerformed
+        modoAdministrador = false;
+        menuDesactivarAdmin.setEnabled(false);
+        panelPrincipal.habilitarCaracteristicasTest(false);
+    }//GEN-LAST:event_menuDesactivarAdminActionPerformed
+
+    void mostrarDialogoAdministrador(){
+        
+        DIALOG_Administrador admin = new DIALOG_Administrador(this, true);
+        
+        admin.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                modoAdministrador = admin.getContraseñaCorrecta();
+                if(modoAdministrador){
+        
+                    panelPrincipal.habilitarCaracteristicasTest(true);
+                    menuDesactivarAdmin.setEnabled(true);
+                    menuAdministrador.setEnabled(false);
+                }
+            }
+        });
+        
+        admin.setVisible(true);
     
+    }
+    
+    boolean mostrarDialogoFinalizarTest(){
+        
+        finalizar = true;
+        
+        DIALOG_FinalizarTest finalTest = new DIALOG_FinalizarTest(this, true);
+        
+        finalTest.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                finalizar = false;
+            }
+        });
+        
+        finalTest.setVisible(true);
+        
+        return finalizar;
+    
+    }
+    
+    String buscarOpcionMarcada(String opcion){
+        String posicionOpcion = "Ninguna";
+        
+        if((listaPreguntas.get(indicePregunta).getRespuestaA() + listaPreguntas.get(indicePregunta).getRespuestaAAbajo()).equals(opcion)){posicionOpcion = "A";}
+        else if((listaPreguntas.get(indicePregunta).getRespuestaB() + listaPreguntas.get(indicePregunta).getRespuestaBAbajo()).equals(opcion)){posicionOpcion = "B";}
+        else if((listaPreguntas.get(indicePregunta).getRespuestaC() + listaPreguntas.get(indicePregunta).getRespuestaCAbajo()).equals(opcion)){posicionOpcion = "C";}
+        else if((listaPreguntas.get(indicePregunta).getRespuestaD() + listaPreguntas.get(indicePregunta).getRespuestaDAbajo()).equals(opcion)){posicionOpcion = "D";}
+        
+        
+        return posicionOpcion;
+    }
+    
+    void mostrarPrimeraPregunta(String nombreArchivo){
+    
+        try {
+            // create object mapper instance
+            ObjectMapper mapper = new ObjectMapper();
+
+            // convert JSON array to list of books
+            File file = new File("preguntas\\" + nombreArchivo + ".json");
+            final ObjectMapper objectMapper = new ObjectMapper();
+            List<Pregunta> langList = objectMapper.readValue(file, new TypeReference<List<Pregunta>>(){});
+
+            langList.forEach(x -> listaPreguntas.add(x));
+            numeroDePreguntas = listaPreguntas.size();
+            arrayRespuestas = new Respuesta[numeroDePreguntas];
+            
+            for(int i = 0;i < numeroDePreguntas;i++){
+                Respuesta respuesta;
+                String pregunta = listaPreguntas.get(i).getPregunta();
+                String respuestaDada = "Ninguna";
+                String respuestaCorrecta = listaPreguntas.get(i).getRespuestaCorrecta();
+                respuesta = new Respuesta(pregunta, respuestaDada, respuestaCorrecta);
+                listaRespuestas.add(respuesta);
+            }
+
+            listaPreguntas = desordenarArrayPreguntas();
+            ArrayList<Pregunta> temporal = new ArrayList();
+            for(int i = 0;i<listaPreguntas.size();i++){
+            
+                temporal.add(panelPreguntas.desordenarRespuestas(listaPreguntas.get(i)));
+                
+            }
+            listaPreguntas = temporal;
+            panelPreguntas.almacenarPreguntas(listaPreguntas);
+            
+            panelPreguntas.dividirCadenasLargasArrayList();
+            panelPreguntas.mostrarXPregunta(indicePregunta);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    
+    }
+    
+    void cambiarRespuesta(){
+        
+        if(panelPreguntas.getOpcionSelecionada().equals("A")){
+            listaRespuestas.get(indicePregunta).setRespuestaDada(listaPreguntas.get(indicePregunta).getRespuestaA() + listaPreguntas.get(indicePregunta).getRespuestaAAbajo());
+        }else if(panelPreguntas.getOpcionSelecionada().equals("B")){
+            listaRespuestas.get(indicePregunta).setRespuestaDada(listaPreguntas.get(indicePregunta).getRespuestaB() + listaPreguntas.get(indicePregunta).getRespuestaBAbajo());
+        }else if(panelPreguntas.getOpcionSelecionada().equals("C")){
+            listaRespuestas.get(indicePregunta).setRespuestaDada(listaPreguntas.get(indicePregunta).getRespuestaC() + listaPreguntas.get(indicePregunta).getRespuestaCAbajo());
+        }else if(panelPreguntas.getOpcionSelecionada().equals("D")){
+            listaRespuestas.get(indicePregunta).setRespuestaDada(listaPreguntas.get(indicePregunta).getRespuestaD() + listaPreguntas.get(indicePregunta).getRespuestaDAbajo());
+        }else{
+            listaRespuestas.get(indicePregunta).setRespuestaDada("Ninguna");
+        }
+        panelPreguntas.quitarSeleccion();
+        
+    }
+    
+    void listaRespuestasAJson(){
+    
+        try {
+            // create books list
+            arrayRespuestas = listaRespuestas.toArray(arrayRespuestas);
+            
+            List<Respuesta> listaResp = Arrays.asList(arrayRespuestas);
+
+            // create object mapper instance
+            ObjectMapper mapper = new ObjectMapper();
+
+            // convert books object to JSON file
+            mapper.writeValue(Paths.get("resultados\\" + panelPrincipal.getTipoTest() + "resultado.json").toFile(), listaResp);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        
+    }
+    
+    void mostrarPanelResultados(){
+    
+        panelResultados.setVisible(true);
+        panelControlador.add(panelResultados);
+        String nombreYApellidos = panelPrincipal.getNombre() + " " + panelPrincipal.getApellidos();
+        String dni = panelPrincipal.getDni();
+        String tipoTest = panelPrincipal.getTipoTest();
+        String numPreguntas = panelPrincipal.getNumPreguntas();
+        panelResultados.rellenarCampos(nombreYApellidos, dni, tipoTest, numPreguntas);
+    
+    }
+    
+    ArrayList<Pregunta> desordenarArrayPreguntas() {
+ 
+        arrayPreguntas = new Pregunta[numeroDePreguntas];
+        arrayPreguntas = listaPreguntas.toArray(arrayPreguntas);
+        
+        Random r = new Random();
+        
+        // 1º método: posición aleatoria
+        for (int i=0; i<arrayPreguntas.length; i++) {
+            int posAleatoria = r.nextInt(arrayPreguntas.length);
+            Pregunta temp = arrayPreguntas[i];
+            arrayPreguntas[i] = arrayPreguntas[posAleatoria];
+            arrayPreguntas[posAleatoria] = temp;
+        }
+ 
+        // 2º método: Collection.shuffle
+        List<Pregunta> lista = Arrays.asList(arrayPreguntas);
+        Collections.shuffle(lista);
+ 
+        lista.toArray(arrayPreguntas);
+        
+        ArrayList<Pregunta> arrayListPreguntas = new ArrayList<Pregunta>();
+        for(Pregunta text:arrayPreguntas) {
+           arrayListPreguntas.add(text);
+        }
+        
+        return arrayListPreguntas;
+    }
     
     /**
      * @param args the command line arguments
@@ -178,10 +449,15 @@ public class FRAME_test extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAnterior;
+    private javax.swing.JButton btnPosterior;
     private javax.swing.JButton btnTest;
     private javax.swing.JMenu jMenuEdicion;
     private javax.swing.JLabel lblAvisoIniciarTest;
+    private javax.swing.JMenuItem menuAdministrador;
     private javax.swing.JMenuBar menuBar;
+    private javax.swing.JMenuItem menuDesactivarAdmin;
     private javax.swing.JPanel panelControlador;
+    private javax.swing.JPanel pnlBotones;
     // End of variables declaration//GEN-END:variables
 }
