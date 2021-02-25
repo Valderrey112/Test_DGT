@@ -43,10 +43,11 @@ public class DIALOG_Administrador extends javax.swing.JDialog {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(36, 131, 0, 158);
+        gridBagConstraints.insets = new java.awt.Insets(88, 156, 0, 147);
         getContentPane().add(lblTextoBienvenida, gridBagConstraints);
 
         txtFieldContraseña.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldContraseña.setToolTipText("");
         txtFieldContraseña.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtFieldContraseñaFocusGained(evt);
@@ -59,7 +60,7 @@ public class DIALOG_Administrador extends javax.swing.JDialog {
         gridBagConstraints.ipadx = 198;
         gridBagConstraints.ipady = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 131, 0, 158);
+        gridBagConstraints.insets = new java.awt.Insets(15, 156, 0, 147);
         getContentPane().add(txtFieldContraseña, gridBagConstraints);
 
         btnComprobar.setText("COMPROBAR");
@@ -72,20 +73,20 @@ public class DIALOG_Administrador extends javax.swing.JDialog {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(30, 186, 11, 0);
+        gridBagConstraints.insets = new java.awt.Insets(30, 211, 20, 0);
         getContentPane().add(btnComprobar, gridBagConstraints);
 
-        lblAvisoContraseña.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        lblAvisoContraseña.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblAvisoContraseña.setForeground(new java.awt.Color(255, 0, 0));
         lblAvisoContraseña.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAvisoContraseña.setText("Contraseña incorrecta");
+        lblAvisoContraseña.setText("         ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 105;
+        gridBagConstraints.ipadx = 85;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(15, 131, 0, 158);
+        gridBagConstraints.insets = new java.awt.Insets(6, 156, 0, 147);
         getContentPane().add(lblAvisoContraseña, gridBagConstraints);
 
         pack();
@@ -95,13 +96,12 @@ public class DIALOG_Administrador extends javax.swing.JDialog {
         if(txtFieldContraseña.getText().equals("abc")){
             contraseñaCorrecta = true;
             lblAvisoContraseña.setText("Contraseña correcta");
-            lblAvisoContraseña.setForeground(Color.GREEN);
-            lblAvisoContraseña.setVisible(true);
+            lblAvisoContraseña.setForeground(Color.BLACK);
             txtFieldContraseña.setEnabled(false);
+            btnComprobar.setEnabled(false);
         }
         else{
             lblAvisoContraseña.setText("Contraseña incorrecta");
-            lblAvisoContraseña.setVisible(true);
         }
     }//GEN-LAST:event_btnComprobarActionPerformed
 

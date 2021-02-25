@@ -36,7 +36,7 @@ public class PANEL_Principal extends javax.swing.JPanel {
     }
     
     public int getFallosMaximos(){return beanCaracteristicasTest.getFallosMaximos();}
-    public String getNumPreguntas(){return String.valueOf(beanCaracteristicasTest.getNumeroDePreguntas());}
+    public int getNumPreguntas(){return beanCaracteristicasTest.getNumeroDePreguntas();}
     public String getTipoTest(){return String.valueOf(beanCaracteristicasTest.getTipoTest());}
     public String getNombre(){return String.valueOf(beanDatosPersonales.getNombre());}
     public String getApellidos(){return String.valueOf(beanDatosPersonales.getApellidos());}

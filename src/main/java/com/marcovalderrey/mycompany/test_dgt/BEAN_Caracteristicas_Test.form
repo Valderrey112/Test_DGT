@@ -72,6 +72,7 @@
             <StringItem index="13" value="DE"/>
           </StringArray>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Tipo de test que se va a realizar"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
@@ -106,6 +107,7 @@
             <StringItem index="9" value="50"/>
           </StringArray>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="N&#xfa;mero de preguntas que va a tener el test"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
@@ -140,6 +142,7 @@
             <StringItem index="9" value="10"/>
           </StringArray>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="N&#xfa;mero m&#xe1;ximo de fallos que se pueden cometer"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>

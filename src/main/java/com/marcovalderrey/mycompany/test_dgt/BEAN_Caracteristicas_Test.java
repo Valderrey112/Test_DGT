@@ -87,6 +87,7 @@ public class BEAN_Caracteristicas_Test extends javax.swing.JPanel implements Ser
 
         comboBoxTipoTest.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         comboBoxTipoTest.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "A1", "A2", "A", "B", "C1", "C", "D1", "D", "BE", "C1E", "CE", "D1E", "DE" }));
+        comboBoxTipoTest.setToolTipText("Tipo de test que se va a realizar");
         comboBoxTipoTest.setEnabled(false);
 
         lblNumPreguntas.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -95,6 +96,7 @@ public class BEAN_Caracteristicas_Test extends javax.swing.JPanel implements Ser
 
         comboBoxNumPreguntas.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         comboBoxNumPreguntas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5", "10", "15", "20", "25", "30", "35", "40", "45", "50" }));
+        comboBoxNumPreguntas.setToolTipText("Número de preguntas que va a tener el test");
         comboBoxNumPreguntas.setEnabled(false);
 
         lblFallosMaximos.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -103,6 +105,7 @@ public class BEAN_Caracteristicas_Test extends javax.swing.JPanel implements Ser
 
         comboBoxFallosMaximos.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         comboBoxFallosMaximos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        comboBoxFallosMaximos.setToolTipText("Número máximo de fallos que se pueden cometer");
         comboBoxFallosMaximos.setEnabled(false);
 
         lblCaracteristicasTest.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N

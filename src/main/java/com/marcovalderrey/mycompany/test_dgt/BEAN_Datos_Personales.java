@@ -59,6 +59,7 @@ public class BEAN_Datos_Personales extends javax.swing.JPanel implements Seriali
 
         txtFieldApellidos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtFieldApellidos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldApellidos.setToolTipText("Introduzca sus dos primeros apellidos");
         txtFieldApellidos.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtFieldApellidosFocusGained(evt);
@@ -70,6 +71,7 @@ public class BEAN_Datos_Personales extends javax.swing.JPanel implements Seriali
 
         txtFieldNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtFieldNombre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldNombre.setToolTipText("Introduzca su nombre");
         txtFieldNombre.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtFieldNombreFocusGained(evt);
@@ -96,6 +98,7 @@ public class BEAN_Datos_Personales extends javax.swing.JPanel implements Seriali
 
         txtFieldDni.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtFieldDni.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldDni.setToolTipText("Introduza su DNI(con letra mayúscula)");
         txtFieldDni.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtFieldDniFocusGained(evt);
@@ -138,11 +141,10 @@ public class BEAN_Datos_Personales extends javax.swing.JPanel implements Seriali
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblTipo)
                         .addGap(18, 18, 18)
-                        .addComponent(lblAvisoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0))))
+                        .addComponent(lblAvisoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtFieldNombre)
+                    .addComponent(txtFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(txtFieldApellidos)
                     .addComponent(txtFieldDni))
                 .addContainerGap())

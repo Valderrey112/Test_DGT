@@ -29,13 +29,13 @@ public class FRAME_test extends javax.swing.JFrame {
     
     ArrayList<Pregunta> listaPreguntas = new ArrayList();
     ArrayList<Respuesta> listaRespuestas = new ArrayList();
+    
     Respuesta arrayRespuestas[];
     Pregunta arrayPreguntas[];
     
     int indicePregunta = 0;
     int numeroDePreguntas = 0;
     
-    boolean modoAdministrador = false;
     boolean finalizar = false;
     
     public FRAME_test() {
@@ -69,7 +69,13 @@ public class FRAME_test extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblAvisoIniciarTest.setForeground(new java.awt.Color(255, 0, 0));
+        lblAvisoIniciarTest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        panelControlador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panelControladorMouseEntered(evt);
+            }
+        });
         panelControlador.setLayout(new java.awt.GridBagLayout());
 
         pnlBotones.setLayout(new java.awt.GridLayout(1, 0));
@@ -83,6 +89,7 @@ public class FRAME_test extends javax.swing.JFrame {
         pnlBotones.add(btnAnterior);
 
         btnTest.setText("INICIAR TEST");
+        btnTest.setToolTipText("");
         btnTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTestActionPerformed(evt);
@@ -126,13 +133,11 @@ public class FRAME_test extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelControlador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(236, 236, 236)
-                .addComponent(lblAvisoIniciarTest, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(117, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblAvisoIniciarTest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -140,9 +145,9 @@ public class FRAME_test extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(panelControlador, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(lblAvisoIniciarTest, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
@@ -153,25 +158,26 @@ public class FRAME_test extends javax.swing.JFrame {
     private void btnTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestActionPerformed
         if(btnTest.getText().equals("INICIAR TEST")){
             
-            if(panelPrincipal.comprobarContenidoCampos()){
+            if(!panelPrincipal.comprobarContenidoCampos()){
 
                 panelPrincipal.setVisible(false);
-                menuAdministrador.setEnabled(false);
                 btnTest.setText("FINALIZAR TEST");
                 btnAnterior.setVisible(true);
                 btnPosterior.setVisible(true);
                 panelControlador.add(panelPreguntas);
 
                 mostrarPrimeraPregunta(panelPrincipal.getTipoTest());
+                desactivarModoAdmin();
+                menuAdministrador.setEnabled(false);
 
             }else{
                 lblAvisoIniciarTest.setText("Se deben de rellenar todos datos personales");
-                lblAvisoIniciarTest.setVisible(true);
             }
         }
         else if(btnTest.getText().equals("FINALIZAR TEST")){
 
             if(mostrarDialogoFinalizarTest()){
+                cambiarRespuesta();
                 panelPreguntas.setVisible(false);
                 listaRespuestasAJson();
                 mostrarPanelResultados();
@@ -180,6 +186,7 @@ public class FRAME_test extends javax.swing.JFrame {
                 btnAnterior.setVisible(false);
                 btnPosterior.setVisible(false);
                 menuAdministrador.setEnabled(true);
+                btnTest.setEnabled(false);
             }
             
         }
@@ -197,8 +204,12 @@ public class FRAME_test extends javax.swing.JFrame {
             listaRespuestas = new ArrayList();
             
             panelControlador.add(panelPrincipal);
+            panelPrincipal.habilitarCaracteristicasTest(true);
+            menuDesactivarAdmin.setEnabled(true);
+            menuAdministrador.setEnabled(false);
             
             btnTest.setText("INICIAR TEST");
+            
             
         }
     }//GEN-LAST:event_btnTestActionPerformed
@@ -218,8 +229,7 @@ public class FRAME_test extends javax.swing.JFrame {
         }
         panelPreguntas.mostrarXPregunta(indicePregunta);
         panelPreguntas.setNumeroPregunta(indicePregunta + 1 + ".");
-        String opcionMarcada = listaRespuestas.get(indicePregunta).getRespuestaDada();
-        panelPreguntas.marcarOpcion(buscarOpcionMarcada(opcionMarcada));
+        guardarOpcionMarcada();
     }//GEN-LAST:event_btnPosteriorActionPerformed
 
     private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnteriorActionPerformed
@@ -232,28 +242,42 @@ public class FRAME_test extends javax.swing.JFrame {
         }
         panelPreguntas.mostrarXPregunta(indicePregunta);
         panelPreguntas.setNumeroPregunta(indicePregunta + 1 + ".");
-        String opcionMarcada = listaRespuestas.get(indicePregunta).getRespuestaDada();
-        panelPreguntas.marcarOpcion(buscarOpcionMarcada(opcionMarcada));
+        guardarOpcionMarcada();
     }//GEN-LAST:event_btnAnteriorActionPerformed
 
     private void menuDesactivarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDesactivarAdminActionPerformed
-        modoAdministrador = false;
-        menuDesactivarAdmin.setEnabled(false);
-        panelPrincipal.habilitarCaracteristicasTest(false);
+        desactivarModoAdmin();
     }//GEN-LAST:event_menuDesactivarAdminActionPerformed
 
+    private void panelControladorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelControladorMouseEntered
+        lblAvisoIniciarTest.setText("");
+    }//GEN-LAST:event_panelControladorMouseEntered
+
+    void desactivarModoAdmin(){
+        panelPrincipal.habilitarCaracteristicasTest(false);
+        menuDesactivarAdmin.setEnabled(false);
+        menuAdministrador.setEnabled(true);
+        panelResultados.activarBotonInformes(false);
+    }
+    
     void mostrarDialogoAdministrador(){
         
         DIALOG_Administrador admin = new DIALOG_Administrador(this, true);
         
         admin.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
-                modoAdministrador = admin.getContraseñaCorrecta();
-                if(modoAdministrador){
+                if(admin.getContraseñaCorrecta()){
         
-                    panelPrincipal.habilitarCaracteristicasTest(true);
-                    menuDesactivarAdmin.setEnabled(true);
-                    menuAdministrador.setEnabled(false);
+                    if(panelPrincipal.isVisible()){
+                        panelPrincipal.habilitarCaracteristicasTest(true);
+                        menuDesactivarAdmin.setEnabled(true);
+                        menuAdministrador.setEnabled(false);
+                    }
+                    if(panelResultados.isVisible()){
+                        btnTest.setEnabled(true);
+                        panelResultados.activarBotonInformes(true);
+                    }
+                    
                 }
             }
         });
@@ -292,6 +316,11 @@ public class FRAME_test extends javax.swing.JFrame {
         return posicionOpcion;
     }
     
+    void guardarOpcionMarcada(){
+        String opcionMarcada = listaRespuestas.get(indicePregunta).getRespuestaDada();
+        panelPreguntas.marcarOpcion(buscarOpcionMarcada(opcionMarcada));
+    }
+    
     void mostrarPrimeraPregunta(String nombreArchivo){
     
         try {
@@ -303,8 +332,12 @@ public class FRAME_test extends javax.swing.JFrame {
             final ObjectMapper objectMapper = new ObjectMapper();
             List<Pregunta> langList = objectMapper.readValue(file, new TypeReference<List<Pregunta>>(){});
 
-            langList.forEach(x -> listaPreguntas.add(x));
-            numeroDePreguntas = listaPreguntas.size();
+            numeroDePreguntas = panelPrincipal.getNumPreguntas();
+            for(int i = 0; i < numeroDePreguntas;i++){
+                listaPreguntas.add(langList.get(i));
+            }
+            
+            listaPreguntas = desordenarArrayPreguntas();
             arrayRespuestas = new Respuesta[numeroDePreguntas];
             
             for(int i = 0;i < numeroDePreguntas;i++){
@@ -316,7 +349,6 @@ public class FRAME_test extends javax.swing.JFrame {
                 listaRespuestas.add(respuesta);
             }
 
-            listaPreguntas = desordenarArrayPreguntas();
             ArrayList<Pregunta> temporal = new ArrayList();
             for(int i = 0;i<listaPreguntas.size();i++){
             
@@ -379,9 +411,41 @@ public class FRAME_test extends javax.swing.JFrame {
         String nombreYApellidos = panelPrincipal.getNombre() + " " + panelPrincipal.getApellidos();
         String dni = panelPrincipal.getDni();
         String tipoTest = panelPrincipal.getTipoTest();
-        String numPreguntas = panelPrincipal.getNumPreguntas();
-        panelResultados.rellenarCampos(nombreYApellidos, dni, tipoTest, numPreguntas);
+        String numPreguntas = String.valueOf(panelPrincipal.getNumPreguntas());
+        String pregContestadas = String.valueOf(getPreguntasContestadas());
+        panelResultados.rellenarCampos(nombreYApellidos, dni, tipoTest, numPreguntas, pregContestadas);
+        panelResultados.rellenarBeanInformes(panelPrincipal.getNombre() + " " + panelPrincipal.getApellidos(), panelPrincipal.getDni(), panelPrincipal.getTipoTest()
+                , String.valueOf(panelPrincipal.getFallosMaximos()), String.valueOf(getPreguntasFalladas()));
     
+    }
+    
+    int getPreguntasContestadas(){
+        int preguntasContestadas = numeroDePreguntas;
+        
+        for(int i = 0; i < listaRespuestas.size();i++){
+            if(listaRespuestas.get(i).getRespuestaDada().equals("Ninguna")){
+                preguntasContestadas -= 1;
+            }
+        }
+        
+        return preguntasContestadas;
+    }
+    
+    int getPreguntasFalladas(){
+        int preguntasFalladas = 0;
+        
+        for(int i = 0; i< listaRespuestas.size(); i++){
+            String respuestaDada = "";
+            if(listaRespuestas.get(i).getRespuestaDada().substring(listaRespuestas.get(i).getRespuestaDada().length() - 4, listaRespuestas.get(i).getRespuestaDada().length()).equals("null")){
+                respuestaDada = listaRespuestas.get(i).getRespuestaDada().substring(0, listaRespuestas.get(i).getRespuestaDada().length() - 4);
+            }else{respuestaDada = listaRespuestas.get(i).getRespuestaDada();}
+            
+            if(!respuestaDada.equals(listaRespuestas.get(i).getRespuestaCorrecta())){
+                preguntasFalladas += 1;
+            }
+        }
+        
+        return preguntasFalladas;
     }
     
     ArrayList<Pregunta> desordenarArrayPreguntas() {

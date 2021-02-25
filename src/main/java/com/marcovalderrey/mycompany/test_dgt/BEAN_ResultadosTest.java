@@ -6,6 +6,7 @@
 package com.marcovalderrey.mycompany.test_dgt;
 
 import java.io.Serializable;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
@@ -14,6 +15,8 @@ import javax.swing.JLabel;
  */
 public class BEAN_ResultadosTest extends javax.swing.JPanel implements Serializable{
 
+    JFrame framePrograma;
+    
     /**
      * Creates new form BEAN_ResultadosTest
      */
@@ -37,6 +40,11 @@ public class BEAN_ResultadosTest extends javax.swing.JPanel implements Serializa
         this.lblTipoTestARellenar.setText(lblTipoTestARellenar);
     }
 
+    public void setLblPreguntasContestadasARellenar(String lblPreguntasContestadasARellenar) {
+        this.lblPreguntasContestadasARellenar.setText(lblPreguntasContestadasARellenar);
+    }
+
+
     
     
     /**
@@ -54,6 +62,8 @@ public class BEAN_ResultadosTest extends javax.swing.JPanel implements Serializa
         lblTipoTestARellenar = new javax.swing.JLabel();
         lblNumPreguntas = new javax.swing.JLabel();
         lblNumPreguntasARellenar = new javax.swing.JLabel();
+        lblPreguntasContestadas = new javax.swing.JLabel();
+        lblPreguntasContestadasARellenar = new javax.swing.JLabel();
 
         lblNombreYApellidos.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         lblNombreYApellidos.setText("Nombre y apellidos: ");
@@ -79,6 +89,12 @@ public class BEAN_ResultadosTest extends javax.swing.JPanel implements Serializa
         lblNumPreguntasARellenar.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         lblNumPreguntasARellenar.setText("............................");
 
+        lblPreguntasContestadas.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        lblPreguntasContestadas.setText("Preguntas contestadas: ");
+
+        lblPreguntasContestadasARellenar.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        lblPreguntasContestadasARellenar.setText("............................");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,16 +109,21 @@ public class BEAN_ResultadosTest extends javax.swing.JPanel implements Serializa
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblNombreARellenar, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(lblNumPreguntas)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(lblNumPreguntas)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lblNumPreguntasARellenar, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(lblTipoTest)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lblTipoTestARellenar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblPreguntasContestadas)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblNumPreguntasARellenar, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(lblTipoTest)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblTipoTestARellenar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(lblPreguntasContestadasARellenar)))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,7 +142,12 @@ public class BEAN_ResultadosTest extends javax.swing.JPanel implements Serializa
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNumPreguntas)
-                    .addComponent(lblNumPreguntasARellenar)))
+                    .addComponent(lblNumPreguntasARellenar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPreguntasContestadas)
+                    .addComponent(lblPreguntasContestadasARellenar))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -133,6 +159,8 @@ public class BEAN_ResultadosTest extends javax.swing.JPanel implements Serializa
     private javax.swing.JLabel lblNombreYApellidos;
     private javax.swing.JLabel lblNumPreguntas;
     private javax.swing.JLabel lblNumPreguntasARellenar;
+    private javax.swing.JLabel lblPreguntasContestadas;
+    private javax.swing.JLabel lblPreguntasContestadasARellenar;
     private javax.swing.JLabel lblTipoTest;
     private javax.swing.JLabel lblTipoTestARellenar;
     // End of variables declaration//GEN-END:variables

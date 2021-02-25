@@ -13,13 +13,14 @@ public class Pregunta {
 
     public Pregunta(){}
     
-    public Pregunta(String pregunta, String respuestaA, String respuestaB, String respuestaC, String respuestaD, String respuestaCorrecta) {
+    public Pregunta(String pregunta, String respuestaA, String respuestaB, String respuestaC, String respuestaD, String respuestaCorrecta, String imagen) {
         this.pregunta = pregunta;
         this.respuestaA = respuestaA;
         this.respuestaB = respuestaB;
         this.respuestaC = respuestaC;
         this.respuestaD = respuestaD;
         this.respuestaCorrecta = respuestaCorrecta;
+        this.imagen = imagen;
     }
     
     
@@ -40,6 +41,8 @@ public class Pregunta {
     String respuestaDAbajo;
     
     String respuestaCorrecta;
+    
+    String imagen;
 
     public String getPregunta() {
         return pregunta;
@@ -128,6 +131,14 @@ public class Pregunta {
     public void setRespuestaCorrecta(String respuestaCorrecta) {
         this.respuestaCorrecta = respuestaCorrecta;
     }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
     
     public String toString(){
     
@@ -137,25 +148,25 @@ public class Pregunta {
     
     void dividirCadenasLargas(){
     
-        if(pregunta.length()>=60){
-            preguntaAbajo = pregunta.substring(59, pregunta.length());
-            pregunta = pregunta.substring(0, 59);
+        if(pregunta.length()>=72){
+            preguntaAbajo = pregunta.substring(71, pregunta.length());
+            pregunta = pregunta.substring(0, 71);
         }
-        if(respuestaA.length()>=38){
-            respuestaAAbajo = respuestaA.substring(37, respuestaA.length());
-            respuestaA = respuestaA.substring(0, 37);
+        if(respuestaA.length()>=45){
+            respuestaAAbajo = respuestaA.substring(44, respuestaA.length());
+            respuestaA = respuestaA.substring(0, 44);
         }
-        if(respuestaB.length()>=38){
-            respuestaBAbajo = respuestaB.substring(37, respuestaB.length());
-            respuestaB = respuestaB.substring(0, 37);
+        if(respuestaB.length()>=45){
+            respuestaBAbajo = respuestaB.substring(44, respuestaB.length());
+            respuestaB = respuestaB.substring(0, 44);
         }
-        if(respuestaC.length()>=38){
-            respuestaCAbajo = respuestaC.substring(37, respuestaC.length());
-            respuestaC = respuestaC.substring(0, 37);
+        if(respuestaC.length()>=45){
+            respuestaCAbajo = respuestaC.substring(44, respuestaC.length());
+            respuestaC = respuestaC.substring(0, 44);
         }
-        if(respuestaD.length()>=38){
-            respuestaDAbajo = respuestaD.substring(37, respuestaD.length());
-            respuestaD = respuestaD.substring(0, 37);
+        if(respuestaD.length()>=45){
+            respuestaDAbajo = respuestaD.substring(44, respuestaD.length());
+            respuestaD = respuestaD.substring(0, 44);
         }
         
     }
