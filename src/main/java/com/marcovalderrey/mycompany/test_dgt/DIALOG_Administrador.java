@@ -34,6 +34,7 @@ public class DIALOG_Administrador extends javax.swing.JDialog {
         lblAvisoContraseña = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         lblTextoBienvenida.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N

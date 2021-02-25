@@ -67,6 +67,7 @@ public class FRAME_test extends javax.swing.JFrame {
         menuDesactivarAdmin = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         lblAvisoIniciarTest.setForeground(new java.awt.Color(255, 0, 0));
         lblAvisoIniciarTest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -217,28 +218,11 @@ public class FRAME_test extends javax.swing.JFrame {
     }//GEN-LAST:event_menuAdministradorActionPerformed
 
     private void btnPosteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPosteriorActionPerformed
-        cambiarRespuesta();
-        if(indicePregunta + 1 > numeroDePreguntas - 1){
-            indicePregunta = 0;
-        }else{
-            indicePregunta += 1;
-        }
-        panelPreguntas.mostrarXPregunta(indicePregunta);
-        panelPreguntas.setNumeroPregunta(indicePregunta + 1 + ".");
-        guardarOpcionMarcada();
+        cambiarPregunta("sumar");
     }//GEN-LAST:event_btnPosteriorActionPerformed
 
     private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnteriorActionPerformed
-        cambiarRespuesta();
-        
-        if(indicePregunta - 1 < 0){
-            indicePregunta = numeroDePreguntas - 1;
-        }else{
-            indicePregunta -= 1;
-        }
-        panelPreguntas.mostrarXPregunta(indicePregunta);
-        panelPreguntas.setNumeroPregunta(indicePregunta + 1 + ".");
-        guardarOpcionMarcada();
+        cambiarPregunta("restar");
     }//GEN-LAST:event_btnAnteriorActionPerformed
 
     private void menuDesactivarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDesactivarAdminActionPerformed
@@ -249,6 +233,26 @@ public class FRAME_test extends javax.swing.JFrame {
         lblAvisoIniciarTest.setText("");
     }//GEN-LAST:event_panelControladorMouseEntered
 
+    void cambiarPregunta(String operacion){
+        cambiarRespuesta();
+        if(operacion.equals("sumar")){
+            if(indicePregunta + 1 > numeroDePreguntas - 1){
+                indicePregunta = 0;
+            }else{
+                indicePregunta += 1;
+            }
+        }else if(operacion.equals("restar")){
+            if(indicePregunta - 1 < 0){
+                indicePregunta = numeroDePreguntas - 1;
+            }else{
+                indicePregunta -= 1;
+            }
+        }
+        panelPreguntas.mostrarXPregunta(indicePregunta);
+        panelPreguntas.setNumeroPregunta(indicePregunta + 1 + ".");
+        guardarOpcionMarcada();
+    }
+    
     void desactivarModoAdmin(){
         panelPrincipal.habilitarCaracteristicasTest(false);
         menuDesactivarAdmin.setEnabled(false);
