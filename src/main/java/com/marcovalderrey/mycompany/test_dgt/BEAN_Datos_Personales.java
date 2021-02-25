@@ -5,10 +5,7 @@
  */
 package com.marcovalderrey.mycompany.test_dgt;
 
-import java.awt.Color;
 import java.io.Serializable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 

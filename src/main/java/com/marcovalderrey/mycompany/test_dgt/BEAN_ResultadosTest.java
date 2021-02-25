@@ -7,7 +7,6 @@ package com.marcovalderrey.mycompany.test_dgt;
 
 import java.io.Serializable;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 /**
  *

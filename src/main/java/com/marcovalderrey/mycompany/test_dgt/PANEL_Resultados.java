@@ -5,7 +5,6 @@
  */
 package com.marcovalderrey.mycompany.test_dgt;
 
-import javax.swing.JFrame;
 
 /**
  *

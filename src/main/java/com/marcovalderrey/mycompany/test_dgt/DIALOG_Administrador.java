@@ -41,9 +41,9 @@ public class DIALOG_Administrador extends javax.swing.JDialog {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(88, 156, 0, 147);
+        gridBagConstraints.insets = new java.awt.Insets(40, 103, 0, 103);
         getContentPane().add(lblTextoBienvenida, gridBagConstraints);
 
         txtFieldContraseña.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -56,11 +56,11 @@ public class DIALOG_Administrador extends javax.swing.JDialog {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 198;
         gridBagConstraints.ipady = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(15, 156, 0, 147);
+        gridBagConstraints.insets = new java.awt.Insets(15, 103, 0, 103);
         getContentPane().add(txtFieldContraseña, gridBagConstraints);
 
         btnComprobar.setText("COMPROBAR");
@@ -72,8 +72,9 @@ public class DIALOG_Administrador extends javax.swing.JDialog {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(30, 211, 20, 0);
+        gridBagConstraints.insets = new java.awt.Insets(30, 158, 40, 0);
         getContentPane().add(btnComprobar, gridBagConstraints);
 
         lblAvisoContraseña.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -83,10 +84,9 @@ public class DIALOG_Administrador extends javax.swing.JDialog {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 85;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 156, 0, 147);
+        gridBagConstraints.insets = new java.awt.Insets(6, 103, 0, 0);
         getContentPane().add(lblAvisoContraseña, gridBagConstraints);
 
         pack();

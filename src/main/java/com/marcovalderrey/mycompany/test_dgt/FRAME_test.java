@@ -193,12 +193,8 @@ public class FRAME_test extends javax.swing.JFrame {
         else if(btnTest.getText().equals("VOLVER A INICIO")){
             
             panelResultados.setVisible(false);
-            
-            panelPrincipal = null;
             panelPrincipal = new PANEL_Principal();
-            panelPreguntas = null;
             panelPreguntas = new PANEL_Preguntas();
-            panelResultados = null;
             panelResultados = new PANEL_Resultados();
             listaPreguntas = new ArrayList();
             listaRespuestas = new ArrayList();

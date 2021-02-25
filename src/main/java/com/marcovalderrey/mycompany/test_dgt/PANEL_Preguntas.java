@@ -11,7 +11,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 /**
  *
@@ -292,14 +291,21 @@ public class PANEL_Preguntas extends javax.swing.JPanel {
     
     void marcarOpcion(String opcion){
         
-        if(opcion.equals("A")){
-            btnOpcionA.setSelected(true);
-        }else if(opcion.equals("B")){
-            btnOpcionB.setSelected(true);
-        }else if(opcion.equals("C")){
-            btnOpcionC.setSelected(true);
-        }else if(opcion.equals("D")){
-            btnOpcionD.setSelected(true);
+        switch (opcion) {
+            case "A":
+                btnOpcionA.setSelected(true);
+                break;
+            case "B":
+                btnOpcionB.setSelected(true);
+                break;
+            case "C":
+                btnOpcionC.setSelected(true);
+                break;
+            case "D":
+                btnOpcionD.setSelected(true);
+                break;
+            default:
+                break;
         }
         
     }
