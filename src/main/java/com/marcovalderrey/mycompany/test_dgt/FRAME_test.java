@@ -194,6 +194,8 @@ public class FRAME_test extends javax.swing.JFrame {
         }
         else if(btnTest.getText().equals("VOLVER A INICIO")){
             
+            borrarArchivoSolucion(panelPrincipal.getTipoTest());
+            
             panelResultados.setVisible(false);
             panelPrincipal = new PANEL_Principal();
             panelPreguntas = new PANEL_Preguntas();
@@ -205,6 +207,7 @@ public class FRAME_test extends javax.swing.JFrame {
             panelPrincipal.habilitarCaracteristicasTest(true);
             menuDesactivarAdmin.setEnabled(true);
             menuAdministrador.setEnabled(false);
+            
             
             btnTest.setText("INICIAR TEST");
             
@@ -476,6 +479,11 @@ public class FRAME_test extends javax.swing.JFrame {
         }
         
         return arrayListPreguntas;
+    }
+    
+    void borrarArchivoSolucion(String archivo){
+        File file = new File("resultados\\" + archivo + "resultado.json");
+        file.delete();
     }
     
     /**
