@@ -19,14 +19,15 @@ public class PANEL_Principal extends javax.swing.JPanel {
     }
 
     boolean comprobarContenidoCampos(){
-        boolean campoVacio = false;
+        boolean camposValidos = true;
         String nombre = beanDatosPersonales.getNombre();
         String apellidos = beanDatosPersonales.getApellidos();
         String dni = beanDatosPersonales.getDni();
-        if(nombre.equals("") | apellidos.equals("") | dni.equals("")){
-            campoVacio = true;
+        boolean aviso = beanDatosPersonales.getAvisoVisible();
+        if(nombre.equals("") | apellidos.equals("") | dni.equals("") | aviso){
+            camposValidos = false;
         }
-        return campoVacio;
+        return camposValidos;
     }
     
     void habilitarCaracteristicasTest(boolean valor){

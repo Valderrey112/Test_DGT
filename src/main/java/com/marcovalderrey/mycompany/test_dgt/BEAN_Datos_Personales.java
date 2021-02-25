@@ -95,7 +95,7 @@ public class BEAN_Datos_Personales extends javax.swing.JPanel implements Seriali
 
         txtFieldDni.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtFieldDni.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFieldDni.setToolTipText("Introduza su DNI(con letra mayúscula)");
+        txtFieldDni.setToolTipText("Introduza su DNI(con o sin guión)");
         txtFieldDni.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtFieldDniFocusGained(evt);
@@ -198,7 +198,6 @@ public class BEAN_Datos_Personales extends javax.swing.JPanel implements Seriali
     private void txtFieldDniFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFieldDniFocusLost
         if(validarDNI(txtFieldDni.getText()) != 0){
             darAviso(lblAvisoDNI, "El DNI no es correcto");
-            txtFieldDni.setText("");
         }
     }//GEN-LAST:event_txtFieldDniFocusLost
 
@@ -224,7 +223,6 @@ public class BEAN_Datos_Personales extends javax.swing.JPanel implements Seriali
                 }
             }
         }catch(Exception e){
-                textFieldAComprobar.setText("");
             darAviso(label, aviso);
         }
     }
@@ -241,7 +239,7 @@ public class BEAN_Datos_Personales extends javax.swing.JPanel implements Seriali
                 int numero = Integer.parseInt(dni.substring(0,8));
                 int numPosicionLetra = numero % 23;
                 String cadenaLetras = "TRWAGMYFPDXBNJZSQVHLCKE";
-                if(cadenaLetras.substring(numPosicionLetra, numPosicionLetra + 1).equals(dni.substring(8,9))){
+                if(cadenaLetras.substring(numPosicionLetra, numPosicionLetra + 1).equals(dni.substring(8,9).toUpperCase())){
                     DNIvalido = 0;
                 }else{
                     DNIvalido = -1;
@@ -265,6 +263,16 @@ public class BEAN_Datos_Personales extends javax.swing.JPanel implements Seriali
     
     void darAviso(JLabel label, String aviso){
         label.setText(aviso);
+    }
+    
+    boolean getAvisoVisible(){
+        boolean avisoVisible = false;
+        
+        if(!lblAvisoApellidos.getText().isEmpty() | !lblAvisoNombre.getText().isEmpty() | !lblAvisoDNI.getText().isEmpty()){
+            avisoVisible = true;
+        }
+        
+        return avisoVisible;
     }
     
     void quitarAviso(JLabel label){

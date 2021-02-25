@@ -159,7 +159,7 @@ public class FRAME_test extends javax.swing.JFrame {
     private void btnTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestActionPerformed
         if(btnTest.getText().equals("INICIAR TEST")){
             
-            if(!panelPrincipal.comprobarContenidoCampos()){
+            if(panelPrincipal.comprobarContenidoCampos()){
 
                 panelPrincipal.setVisible(false);
                 btnTest.setText("FINALIZAR TEST");
