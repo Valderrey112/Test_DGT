@@ -37,12 +37,12 @@ PANTALLANA PRINCIPAL
 
 PANTALLA PREGUNTAS
 -------------------------------
-     Una vez iniciado el test, se nos mostrará la primera pregunta, por cuestiones de programación y estética 
-     los tres botones inferiores son del mismo tamaño, con lo cual puede haber confusión de darle al botón 
-     finalizar test sin querer, por eso nos aparecerá un nuevo diálogo preguntando si queremos finalizar el
-     test (no me ha dado tiempo a implementarlo pero quería añadir que si el número de preguntas sin
-     contestar es igual o superior al número de fallos para aprobar/suspender que nos informase también
-     de ello).
+     Una vez iniciado el test, se nos mostrará la primera pregunta, por cuestiones de programación y
+     estética los tres botones inferiores son del mismo tamaño, con lo cual puede haber confusión de
+     darle al botón finalizar test sin querer, por eso nos aparecerá un nuevo diálogo preguntando si
+     queremos finalizar el test (no me ha dado tiempo a implementarlo pero quería añadir que si el
+     número de preguntas sin contestar es igual o superior al número de fallos para aprobar/suspender
+     que nos informase también de ello).
 
 
      BOTONES OPCION A, B, C, D:
@@ -56,8 +56,8 @@ PANTALLA PREGUNTAS
 
      BOTONES PREGUNTA ANTERIOR Y SIGUIENTE:
 
-          Los botones <-- y --> son para movernos entre las preguntas, pueden ser pulsados de forma indefinida, 
-          reccoriendo así la lista de preguntas de un extremo a otro sin problemas.
+          Los botones <-- y --> son para movernos entre las preguntas, pueden ser pulsados de forma
+          indefinida, reccoriendo así la lista de preguntas de un extremo a otro sin problemas.
 
 
 
@@ -84,9 +84,9 @@ JUSTIFICACIÓN DISEÑO Y FUNCIONAMIENTO
      
      Para poder modificar aspectos del test, bien sea, el número de preguntas, fallos máximos o la fuente de 
      preguntas, debemos de activar el mod0 administrador, que en este caso sería el examinador el que
-     entraría a este modo antes de que alguien realice el test para poner las características acorde al test que
-     se vaya a realizar, y cuando esa persona termine el test, es cuando de nueva el examinador activará el
-     modo administrador para ver la calificación del test de esa persona.
+     entraría a este modo antes de que alguien realice el test para poner las características acorde al test
+     que se vaya a realizar, y cuando esa persona termine el test, es cuando de nueva el examinador
+     activará el modo administrador para ver la calificación del test de esa persona.
 
 
 
@@ -99,5 +99,5 @@ FALLO A CORREGIR
 
      Si alguna pregunta sale repetida, no es por que esté mal programado, si no porque en la base de datos
      las preguntas están repetidas. Mencionando lo anterior, como siempre coge las X primeras, las que no 
-     estás repetidas son las 10 primeras de cada tipo de test, con lo cual si elegimos 10 preguntas para el test,
-     no se repetirá ninguna.)
+     estás repetidas son las 10 primeras de cada tipo de test, con lo cual si elegimos 10 preguntas para el
+     test, no se repetirá ninguna.)
