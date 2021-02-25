@@ -1,0 +1,452 @@
+[
+    {
+        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
+        "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
+        "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
+        "respuestaD":"Cuando salgo del vehiculo en vias pecuarias.",
+        "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "imagen":"chaleco.jpg"
+    },
+    {
+        "pregunta":"¿Qué vehiculos tienen que tener contratado una poliza de Seguro Obligatorio?",
+        "respuestaA":"Todos los vehiculos que circulen por las vias publicas.",
+        "respuestaB":"Todos los vehiculos de motor excepto los ciclomotores.",
+        "respuestaC":"Los vehiculos de motor y los ciclomotores.",
+        "respuestaD":"Solo los que vayan a ser manjeados en autopistas o autovias.",
+        "respuestaCorrecta":"Los vehiculos de motor y los ciclomotores.",
+        "imagen":"poliza.jpg"
+    },
+    {
+        "pregunta":"Si al aproximarse a una interseccion, observa a un agente con el brazo levantado verticalmente, debe detenerse…",
+        "respuestaA":"Solo si ya ha entrado en la interseccion.",
+        "respuestaB":"Solo si ve al agente de frente y siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaC":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaD":"Solo si tenemos tiempo.",
+        "respuestaCorrecta":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "imagen":"brazoenalto.jpg"
+    },
+    {
+        "pregunta":"¿Como se debe circular en una pendiente ascendente con nieve?",
+        "respuestaA":"Con una relacion de marchas cortas.",
+        "respuestaB":"Con una relacion de marchas lo mas alta posible.",
+        "respuestaC":"Rapidamente y sin retener el vehiculo.",
+        "respuestaD":"Lentamente y reteniendo el vehiculo.",
+        "respuestaCorrecta":"Con una relacion de marchas lo mas alta posible.",
+        "imagen":"pendiente.jpg"
+    },
+    {
+        "pregunta":"¿Se permite hacer uso de rafagas con el alumbrado de largo alcance para advertir al vehiculo que le precede la intencion de adelantar?",
+        "respuestaA":"No.",
+        "respuestaB":"Si, pero unicamente fuera de poblado.",
+        "respuestaC":"Si, tanto en poblado como fuera de poblado.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"Si, tanto en poblado como fuera de poblado.",
+        "imagen":"rafagas.jpg"
+    },
+    {
+        "pregunta":"El vehiculo rojo va a girar a la izquierda. ¿Puede circular por el arcen para adelantarlo por la derecha?",
+        "respuestaA":"No, porque esta prohibido circular por el arcen.",
+        "respuestaB":"No, porque el camion no me deja ver.",
+        "respuestaC":"Si, porque es una interseccion con prioridad.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"No, porque esta prohibido circular por el arcen.",
+        "imagen":"arcen.jpg"
+    },
+    {
+        "pregunta":"En esta interseccion, ¿cuando esta permitido adelantar por la derecha?",
+        "respuestaA":"Cuando no hay señales de detencion obligatoria o ceda el paso.",
+        "respuestaB":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "respuestaC":"En cualquier situacion.",
+        "respuestaD":"Cuando no hay señales de via preferente.",
+        "respuestaCorrecta":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "imagen":"interseccion.jpg"
+    },
+    {
+        "pregunta":"Los Agentes de autoridad y personal de obras¿están obligados a utilizar retrorreflectantes para distinguirlos a minimo 50 metros?",
+        "respuestaA":"Si, siempre.",
+        "respuestaB":"Si, pero sólo de noche.",
+        "respuestaC":"No.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"Si, siempre.",
+        "imagen":"agente.jpg"
+    },
+    {
+        "pregunta":"Son remolques ligeros aquellos cuya M.M.A...",
+        "respuestaA":"Es igual a 750kg.",
+        "respuestaB":"Es superior a 750kg.",
+        "respuestaC":"Es inferior a 750kg.",
+        "respuestaD":"No supera los 750kg.",
+        "respuestaCorrecta":"No supera los 750kg..",
+        "imagen":"remolque.jpg"
+    },
+    {
+        "pregunta":"En esta situacion de aglomeracion, ¿podra circular por el arcen?",
+        "respuestaA":"No, esta prohibido.",
+        "respuestaB":"Si, pues existe una gran aglomeracion y asi se descongestiona el trafico.",
+        "respuestaC":"Si, si tienen prisa.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"No, esta prohibido.",
+        "imagen":"aglomeracion.jpg"
+    },
+    {
+        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
+        "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
+        "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
+        "respuestaD":"Cuando salgo del vehiculo en vias pecuarias.",
+        "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "imagen":"chaleco.jpg"
+    },
+    {
+        "pregunta":"¿Qué vehiculos tienen que tener contratado una poliza de Seguro Obligatorio?",
+        "respuestaA":"Todos los vehiculos que circulen por las vias publicas.",
+        "respuestaB":"Todos los vehiculos de motor excepto los ciclomotores.",
+        "respuestaC":"Los vehiculos de motor y los ciclomotores.",
+        "respuestaD":"Solo los que vayan a ser manjeados en autopistas o autovias.",
+        "respuestaCorrecta":"Los vehiculos de motor y los ciclomotores.",
+        "imagen":"poliza.jpg"
+    },
+    {
+        "pregunta":"Si al aproximarse a una interseccion, observa a un agente con el brazo levantado verticalmente, debe detenerse…",
+        "respuestaA":"Solo si ya ha entrado en la interseccion.",
+        "respuestaB":"Solo si ve al agente de frente y siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaC":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaD":"Solo si tenemos tiempo.",
+        "respuestaCorrecta":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "imagen":"brazoenalto.jpg"
+    },
+    {
+        "pregunta":"¿Como se debe circular en una pendiente ascendente con nieve?",
+        "respuestaA":"Con una relacion de marchas cortas.",
+        "respuestaB":"Con una relacion de marchas lo mas alta posible.",
+        "respuestaC":"Rapidamente y sin retener el vehiculo.",
+        "respuestaD":"Lentamente y reteniendo el vehiculo.",
+        "respuestaCorrecta":"Con una relacion de marchas lo mas alta posible.",
+        "imagen":"pendiente.jpg"
+    },
+    {
+        "pregunta":"¿Se permite hacer uso de rafagas con el alumbrado de largo alcance para advertir al vehiculo que le precede la intencion de adelantar?",
+        "respuestaA":"No.",
+        "respuestaB":"Si, pero unicamente fuera de poblado.",
+        "respuestaC":"Si, tanto en poblado como fuera de poblado.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"Si, tanto en poblado como fuera de poblado.",
+        "imagen":"rafagas.jpg"
+    },
+    {
+        "pregunta":"El vehiculo rojo va a girar a la izquierda. ¿Puede circular por el arcen para adelantarlo por la derecha?",
+        "respuestaA":"No, porque esta prohibido circular por el arcen.",
+        "respuestaB":"No, porque el camion no me deja ver.",
+        "respuestaC":"Si, porque es una interseccion con prioridad.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"No, porque esta prohibido circular por el arcen.",
+        "imagen":"arcen.jpg"
+    },
+    {
+        "pregunta":"En esta interseccion, ¿cuando esta permitido adelantar por la derecha?",
+        "respuestaA":"Cuando no hay señales de detencion obligatoria o ceda el paso.",
+        "respuestaB":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "respuestaC":"En cualquier situacion.",
+        "respuestaD":"Cuando no hay señales de via preferente.",
+        "respuestaCorrecta":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "imagen":"interseccion.jpg"
+    },
+    {
+        "pregunta":"Los Agentes de autoridad y personal de obras¿están obligados a utilizar retrorreflectantes para distinguirlos a minimo 50 metros?",
+        "respuestaA":"Si, siempre.",
+        "respuestaB":"Si, pero sólo de noche.",
+        "respuestaC":"No.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"Si, siempre.",
+        "imagen":"agente.jpg"
+    },
+    {
+        "pregunta":"Son remolques ligeros aquellos cuya M.M.A...",
+        "respuestaA":"Es igual a 750kg.",
+        "respuestaB":"Es superior a 750kg.",
+        "respuestaC":"Es inferior a 750kg.",
+        "respuestaD":"No supera los 750kg.",
+        "respuestaCorrecta":"No supera los 750kg..",
+        "imagen":"remolque.jpg"
+    },
+    {
+        "pregunta":"En esta situacion de aglomeracion, ¿podra circular por el arcen?",
+        "respuestaA":"No, esta prohibido.",
+        "respuestaB":"Si, pues existe una gran aglomeracion y asi se descongestiona el trafico.",
+        "respuestaC":"Si, si tienen prisa.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"No, esta prohibido.",
+        "imagen":"aglomeracion.jpg"
+    },
+    {
+        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
+        "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
+        "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
+        "respuestaD":"Cuando salgo del vehiculo en vias pecuarias.",
+        "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "imagen":"chaleco.jpg"
+    },
+    {
+        "pregunta":"¿Qué vehiculos tienen que tener contratado una poliza de Seguro Obligatorio?",
+        "respuestaA":"Todos los vehiculos que circulen por las vias publicas.",
+        "respuestaB":"Todos los vehiculos de motor excepto los ciclomotores.",
+        "respuestaC":"Los vehiculos de motor y los ciclomotores.",
+        "respuestaD":"Solo los que vayan a ser manjeados en autopistas o autovias.",
+        "respuestaCorrecta":"Los vehiculos de motor y los ciclomotores.",
+        "imagen":"poliza.jpg"
+    },
+    {
+        "pregunta":"Si al aproximarse a una interseccion, observa a un agente con el brazo levantado verticalmente, debe detenerse…",
+        "respuestaA":"Solo si ya ha entrado en la interseccion.",
+        "respuestaB":"Solo si ve al agente de frente y siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaC":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaD":"Solo si tenemos tiempo.",
+        "respuestaCorrecta":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "imagen":"brazoenalto.jpg"
+    },
+    {
+        "pregunta":"¿Como se debe circular en una pendiente ascendente con nieve?",
+        "respuestaA":"Con una relacion de marchas cortas.",
+        "respuestaB":"Con una relacion de marchas lo mas alta posible.",
+        "respuestaC":"Rapidamente y sin retener el vehiculo.",
+        "respuestaD":"Lentamente y reteniendo el vehiculo.",
+        "respuestaCorrecta":"Con una relacion de marchas lo mas alta posible.",
+        "imagen":"pendiente.jpg"
+    },
+    {
+        "pregunta":"¿Se permite hacer uso de rafagas con el alumbrado de largo alcance para advertir al vehiculo que le precede la intencion de adelantar?",
+        "respuestaA":"No.",
+        "respuestaB":"Si, pero unicamente fuera de poblado.",
+        "respuestaC":"Si, tanto en poblado como fuera de poblado.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"Si, tanto en poblado como fuera de poblado.",
+        "imagen":"rafagas.jpg"
+    },
+    {
+        "pregunta":"El vehiculo rojo va a girar a la izquierda. ¿Puede circular por el arcen para adelantarlo por la derecha?",
+        "respuestaA":"No, porque esta prohibido circular por el arcen.",
+        "respuestaB":"No, porque el camion no me deja ver.",
+        "respuestaC":"Si, porque es una interseccion con prioridad.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"No, porque esta prohibido circular por el arcen.",
+        "imagen":"arcen.jpg"
+    },
+    {
+        "pregunta":"En esta interseccion, ¿cuando esta permitido adelantar por la derecha?",
+        "respuestaA":"Cuando no hay señales de detencion obligatoria o ceda el paso.",
+        "respuestaB":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "respuestaC":"En cualquier situacion.",
+        "respuestaD":"Cuando no hay señales de via preferente.",
+        "respuestaCorrecta":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "imagen":"interseccion.jpg"
+    },
+    {
+        "pregunta":"Los Agentes de autoridad y personal de obras¿están obligados a utilizar retrorreflectantes para distinguirlos a minimo 50 metros?",
+        "respuestaA":"Si, siempre.",
+        "respuestaB":"Si, pero sólo de noche.",
+        "respuestaC":"No.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"Si, siempre.",
+        "imagen":"agente.jpg"
+    },
+    {
+        "pregunta":"Son remolques ligeros aquellos cuya M.M.A...",
+        "respuestaA":"Es igual a 750kg.",
+        "respuestaB":"Es superior a 750kg.",
+        "respuestaC":"Es inferior a 750kg.",
+        "respuestaD":"No supera los 750kg.",
+        "respuestaCorrecta":"No supera los 750kg..",
+        "imagen":"remolque.jpg"
+    },
+    {
+        "pregunta":"En esta situacion de aglomeracion, ¿podra circular por el arcen?",
+        "respuestaA":"No, esta prohibido.",
+        "respuestaB":"Si, pues existe una gran aglomeracion y asi se descongestiona el trafico.",
+        "respuestaC":"Si, si tienen prisa.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"No, esta prohibido.",
+        "imagen":"aglomeracion.jpg"
+    },
+    {
+        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
+        "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
+        "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
+        "respuestaD":"Cuando salgo del vehiculo en vias pecuarias.",
+        "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "imagen":"chaleco.jpg"
+    },
+    {
+        "pregunta":"¿Qué vehiculos tienen que tener contratado una poliza de Seguro Obligatorio?",
+        "respuestaA":"Todos los vehiculos que circulen por las vias publicas.",
+        "respuestaB":"Todos los vehiculos de motor excepto los ciclomotores.",
+        "respuestaC":"Los vehiculos de motor y los ciclomotores.",
+        "respuestaD":"Solo los que vayan a ser manjeados en autopistas o autovias.",
+        "respuestaCorrecta":"Los vehiculos de motor y los ciclomotores.",
+        "imagen":"poliza.jpg"
+    },
+    {
+        "pregunta":"Si al aproximarse a una interseccion, observa a un agente con el brazo levantado verticalmente, debe detenerse…",
+        "respuestaA":"Solo si ya ha entrado en la interseccion.",
+        "respuestaB":"Solo si ve al agente de frente y siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaC":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaD":"Solo si tenemos tiempo.",
+        "respuestaCorrecta":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "imagen":"brazoenalto.jpg"
+    },
+    {
+        "pregunta":"¿Como se debe circular en una pendiente ascendente con nieve?",
+        "respuestaA":"Con una relacion de marchas cortas.",
+        "respuestaB":"Con una relacion de marchas lo mas alta posible.",
+        "respuestaC":"Rapidamente y sin retener el vehiculo.",
+        "respuestaD":"Lentamente y reteniendo el vehiculo.",
+        "respuestaCorrecta":"Con una relacion de marchas lo mas alta posible.",
+        "imagen":"pendiente.jpg"
+    },
+    {
+        "pregunta":"¿Se permite hacer uso de rafagas con el alumbrado de largo alcance para advertir al vehiculo que le precede la intencion de adelantar?",
+        "respuestaA":"No.",
+        "respuestaB":"Si, pero unicamente fuera de poblado.",
+        "respuestaC":"Si, tanto en poblado como fuera de poblado.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"Si, tanto en poblado como fuera de poblado.",
+        "imagen":"rafagas.jpg"
+    },
+    {
+        "pregunta":"El vehiculo rojo va a girar a la izquierda. ¿Puede circular por el arcen para adelantarlo por la derecha?",
+        "respuestaA":"No, porque esta prohibido circular por el arcen.",
+        "respuestaB":"No, porque el camion no me deja ver.",
+        "respuestaC":"Si, porque es una interseccion con prioridad.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"No, porque esta prohibido circular por el arcen.",
+        "imagen":"arcen.jpg"
+    },
+    {
+        "pregunta":"En esta interseccion, ¿cuando esta permitido adelantar por la derecha?",
+        "respuestaA":"Cuando no hay señales de detencion obligatoria o ceda el paso.",
+        "respuestaB":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "respuestaC":"En cualquier situacion.",
+        "respuestaD":"Cuando no hay señales de via preferente.",
+        "respuestaCorrecta":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "imagen":"interseccion.jpg"
+    },
+    {
+        "pregunta":"Los Agentes de autoridad y personal de obras¿están obligados a utilizar retrorreflectantes para distinguirlos a minimo 50 metros?",
+        "respuestaA":"Si, siempre.",
+        "respuestaB":"Si, pero sólo de noche.",
+        "respuestaC":"No.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"Si, siempre.",
+        "imagen":"agente.jpg"
+    },
+    {
+        "pregunta":"Son remolques ligeros aquellos cuya M.M.A...",
+        "respuestaA":"Es igual a 750kg.",
+        "respuestaB":"Es superior a 750kg.",
+        "respuestaC":"Es inferior a 750kg.",
+        "respuestaD":"No supera los 750kg.",
+        "respuestaCorrecta":"No supera los 750kg..",
+        "imagen":"remolque.jpg"
+    },
+    {
+        "pregunta":"En esta situacion de aglomeracion, ¿podra circular por el arcen?",
+        "respuestaA":"No, esta prohibido.",
+        "respuestaB":"Si, pues existe una gran aglomeracion y asi se descongestiona el trafico.",
+        "respuestaC":"Si, si tienen prisa.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"No, esta prohibido.",
+        "imagen":"aglomeracion.jpg"
+    },
+    {
+        "pregunta":"El chaleco reflectante. ¿Cuando es obligatorio ponerselo?",
+        "respuestaA":"Cuando salgo del vehiculo en vias urbanas.",
+        "respuestaB":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "respuestaC":"Cuando salgo del vehiculo en vias interurbanas.",
+        "respuestaD":"Cuando salgo del vehiculo en vias pecuarias.",
+        "respuestaCorrecta":"Cuando salgo del vehiculo en autopistas y autovias solamente.",
+        "imagen":"chaleco.jpg"
+    },
+    {
+        "pregunta":"¿Qué vehiculos tienen que tener contratado una poliza de Seguro Obligatorio?",
+        "respuestaA":"Todos los vehiculos que circulen por las vias publicas.",
+        "respuestaB":"Todos los vehiculos de motor excepto los ciclomotores.",
+        "respuestaC":"Los vehiculos de motor y los ciclomotores.",
+        "respuestaD":"Solo los que vayan a ser manjeados en autopistas o autovias.",
+        "respuestaCorrecta":"Los vehiculos de motor y los ciclomotores.",
+        "imagen":"poliza.jpg"
+    },
+    {
+        "pregunta":"Si al aproximarse a una interseccion, observa a un agente con el brazo levantado verticalmente, debe detenerse…",
+        "respuestaA":"Solo si ya ha entrado en la interseccion.",
+        "respuestaB":"Solo si ve al agente de frente y siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaC":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "respuestaD":"Solo si tenemos tiempo.",
+        "respuestaCorrecta":"Siempre que pueda hacerlo en condiciones de seguridad.",
+        "imagen":"brazoenalto.jpg"
+    },
+    {
+        "pregunta":"¿Como se debe circular en una pendiente ascendente con nieve?",
+        "respuestaA":"Con una relacion de marchas cortas.",
+        "respuestaB":"Con una relacion de marchas lo mas alta posible.",
+        "respuestaC":"Rapidamente y sin retener el vehiculo.",
+        "respuestaD":"Lentamente y reteniendo el vehiculo.",
+        "respuestaCorrecta":"Con una relacion de marchas lo mas alta posible.",
+        "imagen":"pendiente.jpg"
+    },
+    {
+        "pregunta":"¿Se permite hacer uso de rafagas con el alumbrado de largo alcance para advertir al vehiculo que le precede la intencion de adelantar?",
+        "respuestaA":"No.",
+        "respuestaB":"Si, pero unicamente fuera de poblado.",
+        "respuestaC":"Si, tanto en poblado como fuera de poblado.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"Si, tanto en poblado como fuera de poblado.",
+        "imagen":"rafagas.jpg"
+    },
+    {
+        "pregunta":"El vehiculo rojo va a girar a la izquierda. ¿Puede circular por el arcen para adelantarlo por la derecha?",
+        "respuestaA":"No, porque esta prohibido circular por el arcen.",
+        "respuestaB":"No, porque el camion no me deja ver.",
+        "respuestaC":"Si, porque es una interseccion con prioridad.",
+        "respuestaD":"Si, en cualquier circustancia.",
+        "respuestaCorrecta":"No, porque esta prohibido circular por el arcen.",
+        "imagen":"arcen.jpg"
+    },
+    {
+        "pregunta":"En esta interseccion, ¿cuando esta permitido adelantar por la derecha?",
+        "respuestaA":"Cuando no hay señales de detencion obligatoria o ceda el paso.",
+        "respuestaB":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "respuestaC":"En cualquier situacion.",
+        "respuestaD":"Cuando no hay señales de via preferente.",
+        "respuestaCorrecta":"Cuando el vehiculo que va delante va a girar a la izquierda.",
+        "imagen":"interseccion.jpg"
+    },
+    {
+        "pregunta":"Los Agentes de autoridad y personal de obras¿están obligados a utilizar retrorreflectantes para distinguirlos a minimo 50 metros?",
+        "respuestaA":"Si, siempre.",
+        "respuestaB":"Si, pero sólo de noche.",
+        "respuestaC":"No.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"Si, siempre.",
+        "imagen":"agente.jpg"
+    },
+    {
+        "pregunta":"Son remolques ligeros aquellos cuya M.M.A...",
+        "respuestaA":"Es igual a 750kg.",
+        "respuestaB":"Es superior a 750kg.",
+        "respuestaC":"Es inferior a 750kg.",
+        "respuestaD":"No supera los 750kg.",
+        "respuestaCorrecta":"No supera los 750kg..",
+        "imagen":"remolque.jpg"
+    },
+    {
+        "pregunta":"En esta situacion de aglomeracion, ¿podra circular por el arcen?",
+        "respuestaA":"No, esta prohibido.",
+        "respuestaB":"Si, pues existe una gran aglomeracion y asi se descongestiona el trafico.",
+        "respuestaC":"Si, si tienen prisa.",
+        "respuestaD":"Dependiendo de la circustancia.",
+        "respuestaCorrecta":"No, esta prohibido.",
+        "imagen":"aglomeracion.jpg"
+    }
+]
