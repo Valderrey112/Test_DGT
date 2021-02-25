@@ -119,6 +119,8 @@ public class PANEL_Preguntas extends javax.swing.JPanel {
             }
         });
 
+        Img.setToolTipText("Imagén de referencia.");
+
         javax.swing.GroupLayout panelImagenLayout = new javax.swing.GroupLayout(panelImagen);
         panelImagen.setLayout(panelImagenLayout);
         panelImagenLayout.setHorizontalGroup(

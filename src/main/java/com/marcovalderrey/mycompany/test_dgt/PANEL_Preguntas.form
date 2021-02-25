@@ -287,6 +287,9 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="Img">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Imag&#xe9;n de referencia."/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

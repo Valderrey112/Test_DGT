@@ -106,6 +106,7 @@
         <Component class="javax.swing.JButton" name="btnAnterior">
           <Properties>
             <Property name="text" type="java.lang.String" value="&lt;---"/>
+            <Property name="toolTipText" type="java.lang.String" value="Pregunta anterior"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnteriorActionPerformed"/>
@@ -114,7 +115,6 @@
         <Component class="javax.swing.JButton" name="btnTest">
           <Properties>
             <Property name="text" type="java.lang.String" value="INICIAR TEST"/>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTestActionPerformed"/>
@@ -123,6 +123,7 @@
         <Component class="javax.swing.JButton" name="btnPosterior">
           <Properties>
             <Property name="text" type="java.lang.String" value="---&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" value="Siguiente pregunta"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPosteriorActionPerformed"/>

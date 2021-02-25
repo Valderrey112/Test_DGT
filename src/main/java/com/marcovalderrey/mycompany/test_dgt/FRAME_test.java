@@ -82,6 +82,7 @@ public class FRAME_test extends javax.swing.JFrame {
         pnlBotones.setLayout(new java.awt.GridLayout(1, 0));
 
         btnAnterior.setText("<---");
+        btnAnterior.setToolTipText("Pregunta anterior");
         btnAnterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAnteriorActionPerformed(evt);
@@ -90,7 +91,6 @@ public class FRAME_test extends javax.swing.JFrame {
         pnlBotones.add(btnAnterior);
 
         btnTest.setText("INICIAR TEST");
-        btnTest.setToolTipText("");
         btnTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTestActionPerformed(evt);
@@ -99,6 +99,7 @@ public class FRAME_test extends javax.swing.JFrame {
         pnlBotones.add(btnTest);
 
         btnPosterior.setText("--->");
+        btnPosterior.setToolTipText("Siguiente pregunta");
         btnPosterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPosteriorActionPerformed(evt);
